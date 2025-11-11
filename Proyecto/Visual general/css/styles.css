@@ -1,0 +1,195 @@
+:root {
+    --color-green-light: #e0f2e0;
+    --color-green-dark: #46784d;
+    --color-sidebar-bg: #f8f8f8;
+    --color-card-green: #e5f5e5;
+    --color-text-dark: #333333;
+    --sidebar-width: 250px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    background-color: var(--color-sidebar-bg);
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); 
+    color: var(--color-text-dark);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 40px;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--color-green-dark);
+}
+.logo-icon {
+    color: var(--color-green-dark);
+    font-size: 1.5em;
+    margin-right: 5px;
+    font-weight: 900;
+}
+.logo-text {
+    color: var(--color-green-dark);
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 12px 20px;
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-item.activo {
+    background-color: var(--color-green-light); 
+    border-radius: 0 50px 50px 0;
+    color: var(--color-green-dark);
+    font-weight: 500;
+    border-left: 5px solid var(--color-green-dark); 
+}
+
+.icon {
+    margin-right: 15px;
+    font-size: 1.3em;
+    color: var(--color-text-dark); 
+}
+
+.nav-item.activo .icon {
+    color: var(--color-green-dark);
+}
+
+.nav-separator {
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 20px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    padding-left: 50px;
+    background-color: #f8f8f8;
+}
+
+.header-search {
+    padding: 0 0 30px 0;
+}
+
+.header-search input {
+    width: 60%; 
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-content-bg);
+    font-size: 1.1em;
+    color: #888;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: var(--color-text-dark);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tip-card {
+    background-color: var(--color-card-green);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.primary-tip {
+    width: 100%;
+    max-width: 500px;
+}
+
+.secondary-tip {
+    flex-basis: calc(50% - 10px); 
+    max-width: calc(50% - 10px);
+    min-width: 250px;
+}
+
+.tip-title {
+    font-size: 0.9em;
+    color: var(--color-text-dark);
+    opacity: 0.7;
+    margin: 0 0 5px 0;
+}
+
+.tip-text {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 0;
+    color: var(--color-text-dark);
+}
+
+.tip-detail {
+    font-size: 1em;
+    color: var(--color-text-dark);
+    margin: 5px 0 0 0;
+}
+
+@media (max-width: 900px) {
+    /* En tabletas y móviles, las tarjetas secundarias ocupan todo el ancho */
+    .secondary-tip {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* En móviles, ocultamos la barra lateral y hacemos el contenido principal completo */
+    .sidebar {
+        display: none;
+    }
+    
+    .main-content {
+        padding: 20px;
+        padding-left: 20px; /* Eliminamos el padding extra de separación */
+    }
+    
+    .header-search input {
+        width: 100%; /* El buscador ocupa todo el ancho */
+        max-width: 100%;
+    }
+}
+
+a{
+    text-decoration: none;
+}
