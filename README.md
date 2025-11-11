@@ -1,21 +1,40 @@
 # Proyecto Equipo 5
 
-Proyecto colaborativo de 5 desarrolladores usando **GitHub Flow**.
+Proyecto colaborativo **sin tareas fijas**.  
+**Todos pueden modificar cualquier parte del código.**
 
-## Estructura de ramas
-- `main` → producción (solo código revisado y aprobado)
-- `feature/login-federico123456789-alt`
-- `feature/home-D-A-IBARRA-T`
-- `feature/profile-SebastianTorresAA`
-- `feature/cart-danitru07`
-- `feature/dashboard-ju321-c`
+---
 
-## Flujo de trabajo (obligatorio)
-1. `git pull origin main`
-2. Crear rama: `git checkout -b feature/xxx-@tuusuario`
-3. Hacer cambios → `git add .` → `git commit -m "feat: ..."`
-4. `git push origin feature/xxx-@tuusuario`
-5. Abrir **Pull Request** en GitHub
-6. Revisar → Mergear → Borrar rama
+## Ramas personales (una por desarrollador)
 
-## Convenciones de commits
+
+ `dev/federico123456789-alt` 
+ `dev/D-A-IBARRA-T` 
+ `dev/SebastianTorresAA` 
+ `dev/danitru07` 
+ `dev/ju321-c` 
+
+> Usa **tu rama `dev/tuusuario`** para cualquier cambio.
+
+---
+
+## Flujo de trabajo (obligatorio para todos)
+
+```bash
+# 1. Actualizar main
+git checkout main
+git pull origin main
+
+# 2. Cambiar a tu rama personal
+git checkout dev/tuusuario
+
+# 3. Hacer cambios
+code archivo.html
+git add .
+git commit -m "feat: descripción clara"
+
+# 4. Subir cambios
+git push
+
+# 5. En GitHub → "Compare & pull request"
+#    → base: main ← compare: dev/tuusuario
